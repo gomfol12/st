@@ -1,2 +1,2 @@
-#st
+# st
 My fork of st
