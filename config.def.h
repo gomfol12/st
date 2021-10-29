@@ -9,9 +9,9 @@ static char *font = "monospace:pixelsize=14";
 /*"Iosevka Medium Extended:pixelsize=14:antialias=true:autohint=true"*/
 
 /* Spare fonts */
-static char *font2[] = { "Symbols Nerd Font:pixelsize=14:antialias=true:autohint=true",
-						 "JoyPixels:pixelsize=12:antialias=true:autohint=true",
-                         "Noto Emoji:pixelsize=12:antialias=true:autohint=true" };
+static char *font2[] = { "Symbols Nerd Font:pixelsize=15:antialias=true:autohint=true",
+						 "JoyPixels:pixelsize=14:antialias=true:autohint=true",
+                         "Noto Emoji:pixelsize=14:antialias=true:autohint=true" };
 
 static int borderpx = 1;
 
@@ -23,7 +23,7 @@ static int borderpx = 1;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/sh";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
@@ -1136,4 +1136,3 @@ static uint selmasks[] = {
 static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-	"`abcdefghijklmnopqrstuvwxyz{|}~";
