@@ -238,12 +238,12 @@ ResourcePref resources[] = {
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-const unsigned int mousescrollincrement = 2;
+const unsigned int mousescrollincrement = 4;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = mousescrollincrement},      0, /* !alt */ -1 },
 	{ XK_ANY_MOD,           Button5, kscrolldown,    {.i = mousescrollincrement},      0, /* !alt */ -1 },
-	{ XK_ANY_MOD,           Button2, clippaste,       {.i = 0},      1 },
+	{ XK_ANY_MOD,           Button2, clippaste,      {.i = 0},      1 },
 	{ ShiftMask,            Button4, ttysend,        {.s = "\033[5;2~"} },
 	{ XK_ANY_MOD,           Button4, ttysend,        {.s = "\031"} },
 	{ ShiftMask,            Button5, ttysend,        {.s = "\033[6;2~"} },
@@ -266,6 +266,9 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,				XK_braceright,	zoom,			{.f = +1} },
 	{ TERMMOD,				XK_bar,			zoom,			{.f = -1} },
 	{ TERMMOD,				XK_parenright,	zoomreset,		{.f =  0} },
+	{ TERMMOD,              XK_H,           zoom,           {.f = +1} },
+	{ TERMMOD,              XK_L,           zoom,           {.f = -1} },
+	{ TERMMOD,              XK_G,           zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
@@ -273,7 +276,11 @@ static Shortcut shortcuts[] = {
 	{ TERMMOD,              XK_Num_Lock,    numlock,        {.i =  0} },
 	{ ShiftMask,            XK_Page_Up,     kscrollup,      {.i = -1} },
 	{ ShiftMask,            XK_Page_Down,   kscrolldown,    {.i = -1} },
-	{ TERMMOD,              XK_L,           copyurl,        {.i =  0} },
+	{ TERMMOD,              XK_K,           kscrollup,      {.i = mousescrollincrement} },
+	{ TERMMOD,              XK_J,           kscrolldown,    {.i = mousescrollincrement} },
+	{ TERMMOD,              XK_U,           kscrollup,      {.i = -1} },
+	{ TERMMOD,              XK_D,           kscrolldown,    {.i = -1} },
+	{ TERMMOD,              XK_I,           copyurl,        {.i =  0} },
 	{ TERMMOD,              XK_O,           opencopied,     {.v = "xdg-open"} },
 };
 
