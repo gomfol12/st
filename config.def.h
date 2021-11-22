@@ -144,7 +144,7 @@ static const char *colorname[] = {
 	"#000000",
 	"#666666",
     "#ffffff",
-    "#000000",
+    "#ffffff",
 };
 
 
@@ -231,7 +231,7 @@ ResourcePref resources[] = {
 		{ "background",   STRING,  &colorname[257] },
 		{ "selectionbg",  STRING,  &colorname[258] },
 		{ "selectionfg",  STRING,  &colorname[259] },
-		{ "cursorColor",  STRING,  &colorname[260] },
+		{ "color7",       STRING,  &colorname[260] }, // cursor
 };
 
 /*
