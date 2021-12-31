@@ -9,9 +9,9 @@ static char *font = "monospace:pixelsize=14";
 /*"Iosevka Medium Extended:pixelsize=14:antialias=true:autohint=true"*/
 
 /* Spare fonts */
-static char *font2[] = { "Symbols Nerd Font:pixelsize=15:antialias=true:autohint=true",
-						 "JoyPixels:pixelsize=14:antialias=true:autohint=true",
-                         "Noto Emoji:pixelsize=14:antialias=true:autohint=true" };
+static char *font2[] = { "Symbols Nerd Font:pixelsize=14:antialias=true:autohint=true",
+                         "Twemoji:pixelsize=14:antialias=true:autohint=true"
+};
 
 static int borderpx = 1;
 
@@ -236,7 +236,7 @@ ResourcePref resources[] = {
  * Internal mouse shortcuts.
  * Beware that overloading Button1 will disable the selection.
  */
-const unsigned int mousescrollincrement = 4;
+const unsigned int mousescrollincrement = 2;
 static MouseShortcut mshortcuts[] = {
 	/* mask                 button   function        argument       release */
 	{ XK_ANY_MOD,           Button4, kscrollup,      {.i = mousescrollincrement},      0, /* !alt */ -1 },
